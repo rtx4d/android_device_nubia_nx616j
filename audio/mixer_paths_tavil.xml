@@ -46,23 +46,23 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
-    <ctl name="Configuration" value="0" />
+	<ctl name="TFA Profile" value="ringtone" />
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia8" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia7" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia10" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia11" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia12" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia13" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia14" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia15" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia16" value="0" />
-    <ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="0" />
-    <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
-    <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia10" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia8" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia7" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia10" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia11" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia12" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia13" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia14" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia15" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia16" value="0" />
+	<ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="0" />
+	<ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
+	<ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
+	<ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia10" value="0" />
     <ctl name="SLIMBUS_0_RX Port Mixer SLIM_0_TX" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia4" value="0" />
@@ -186,6 +186,7 @@
     <ctl name="SLIM_2_RX Channels" value="One" />
     <ctl name="SLIM_0_TX Channels" value="One" />
     <ctl name="SLIM_1_TX Channels" value="One" />
+	<ctl name="QUAT_MI2S_TX Channels" value="Two" />
     <ctl name="AIF1_CAP Mixer SLIM TX9" value="0"/>
     <ctl name="AIF1_CAP Mixer SLIM TX8" value="0"/>
     <ctl name="AIF1_CAP Mixer SLIM TX7" value="0" />
@@ -354,6 +355,8 @@
     <ctl name="RX5 Digital Volume" value="84" />
     <ctl name="RX6 Digital Volume" value="84" />
     <ctl name="RX7 Digital Volume" value="84" />
+	<ctl name="RX1 Mix Digital Volume" value="84" />
+	<ctl name="RX2 Mix Digital Volume" value="84" />
     <ctl name="ADC1 Volume" value="12" />
     <ctl name="ADC2 Volume" value="12" />
     <ctl name="ADC3 Volume" value="12" />
@@ -1812,7 +1815,6 @@
     </path>
 
     <path name="compress-voip-call speaker">
-		<ctl name="Configuration" value="1" />
 		<ctl name="VOC_EXT_EC MUX" value="QUAT_MI2S_TX" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
@@ -1859,8 +1861,8 @@
     </path>
 
     <path name="voicemmode1-call speaker">
-		<ctl name="Configuration" value="1" />
 		<ctl name="VOC_EXT_EC MUX" value="QUAT_MI2S_TX" />
+		<ctl name="TFA Profile" value="voice" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1" />
     </path>
@@ -1915,8 +1917,8 @@
     </path>
 
     <path name="voicemmode2-call speaker">
-		<ctl name="Configuration" value="1" />
 		<ctl name="VOC_EXT_EC MUX" value="QUAT_MI2S_TX" />
+		<ctl name="TFA Profile" value="voice" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer SLIM_0_TX_MMode2" value="1" />
     </path>
@@ -2220,6 +2222,10 @@
         <ctl name="EAR SPKR PA Gain" value="G_6_DB" />
     </path>
 
+	<path name="handset-test">
+		<path name="handset" />
+    </path>
+	
     <path name="handset-qrd">
         <ctl name="SLIM RX0 MUX" value="AIF1_PB" />
         <ctl name="CDC_IF RX0 MUX" value="SLIM RX0" />
@@ -2248,17 +2254,17 @@
 
 	<path name="single-mic-main">
         <path name="handset-mic" />
-		<ctl name="ADC1 Volume" value="14" />
+		<ctl name="ADC1 Volume" value="20" />
     </path>
 
     <path name="single-mic-sec">
         <path name="speaker-mic" />
-		<ctl name="ADC3 Volume" value="14" />
+		<ctl name="ADC3 Volume" value="20" />
     </path>
 
 	<path name="single-mic-tri">
         <path name="third-mic" />
-		<ctl name="ADC4 Volume" value="14" />
+		<ctl name="ADC4 Volume" value="20" />
     </path>
 
     <path name="handset-mic-db">
@@ -2319,9 +2325,11 @@
     </path>
 
     <path name="headphones-test">
-	<path name="headphones" />
-	<ctl name="RX1 Digital Volume" value="124" />
-	<ctl name="RX2 Digital Volume" value="124" />
+		<path name="headphones" />
+		<ctl name="RX1 Digital Volume" value="124" />
+		<ctl name="RX2 Digital Volume" value="124" />
+		<ctl name="RX1 Mix Digital Volume" value="95" />
+		<ctl name="RX2 Mix Digital Volume" value="95" />
     </path>
     
     <path name="asrc-mode">
@@ -2372,7 +2380,7 @@
 
     <path name="headset-mic-test">
 	<path name="headset-mic" />
-	<ctl name="ADC2 Volume" value="20" />
+	<ctl name="ADC2 Volume" value="12" />
     </path>
     
     <path name="voice-handset">
@@ -2400,7 +2408,6 @@
     </path>
 
     <path name="voice-speaker">
-		<ctl name="Configuration" value="1" />
         <path name="speaker-mono" />
     </path>
 
@@ -2413,7 +2420,6 @@
     </path>
 
     <path name="voice-speaker-2">
-		<ctl name="Configuration" value="1" />
         <path name="speaker-mono-2" />
     </path>
 

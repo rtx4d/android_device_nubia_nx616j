@@ -1,2 +1,2 @@
-require version-modem=2020-06-17 00:08:25
-require version-nubiaUI=NX606J_CNCommon_V2.31
+require version-modem=2022-03-04 21:23:16
+require version-nubiaUI=NX616J_CNCommon_V3.25

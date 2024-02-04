@@ -19,7 +19,7 @@
 <resources>
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
-    <string name="def_device_name_simple">Nubia Z18</string>
+    <string name="def_device_name_simple">Nubia X</string>
 
 </resources>
 
