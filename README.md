@@ -1,11 +1,9 @@
-Copyright (C) 2023 The LineageOS Project
+Copyright (C) 2024 The LineageOS Project
 
-Device configuration for Nubia Z18
+Device configuration for Nubia X
 =============================================
 
-The Nubia Z18 (codenamed _"NX606J"_) is a high-end smartphone from Nubia.
-
-It was announced in September 2018. Release date was September 2018.
+The Nubia X (codenamed _"NX616J"_) is a high-end smartphone from Nubia.
 
 ## Device specifications
 
@@ -16,13 +14,13 @@ CPU     | Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.8 GHz Kryo 385 Silver)
 GPU     | Adreno 630
 Memory  | 6/8 GB RAM
 Shipped Android Version | 8.1 with nubia UI 6
-Storage | 64/128 GB
-Battery | Non-removable Li-Po 3450 mAh battery
-Display | 1080 x 2160 pixels, 18:9 ratio, 5.99 inches, IPS LCD (~403 ppi density)
-Back camera (main) | Sony IMX 499, 16 MP, f/1.6, dual pixel PDAF, OIS
-Back camera (aux) | 24 MP, f/1.6
-Front camera | 8 MP, f/2.0, HDR
+Storage | 64/128/256/512 GB
+Battery | Non-removable Li-Po 3800 mAh battery
+Main display | 1080 x 2280 pixels, 19:9 ratio, 6.26 inches, IPS LCD (~403 ppi density)
+Secondary display | 720 x 1520 pixels, 19:9 ratio, 5.1 inches, OLED
+Back camera | Sony IMX519 16 MP, f/1.8
+Back camera | 24 MP, f/1.7
 
 ## Device picture
 
-![Nubia Z18](https://playfuldroid.com/wp-content/uploads/2018/09/ZTE-Nubia-Z18-600x476.jpg "Nubia Z18")
+![Nubia X](https://ui.nubia.cn/upload/image/2.jpg "Nubia X")

@@ -4,51 +4,25 @@
 # For all nubia projects defined in device/zte
 
 on boot
-   #audio
-   chmod 0644 /persist/tas2555_cal.bin
-
    # goodix fp
    chown system system /dev/goodix_fp
    chmod 0777 /dev/goodix_fp
-
+    
 on post-fs-data
-    # goodix fp
-    mkdir /data/vendor/goodix 0777 system system
+    # goodix double fp
+    chown system system /dev/goodix_fp_l
+        chmod 0777 /dev/goodix_fp_l
+    chown system system /dev/goodix_fp_r
+        chmod 0777 /dev/goodix_fp_r
     setprop ro.hardware.fingerprint goodix
-
-    # NFC
-    chmod 777 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
-    mkdir /data/vendor/nfc 770 nfc nfc
-    mkdir /data/vendor/nfc/param 0770 nfc nfc
-    setprop ro.hardware.nfc_nci sec
 
     # tp & lcd node
     mkdir /data/tp 0775 system system
     mkdir /data/tp/debug 0775 system system
-    symlink /sys/class/tpnode/tpnode/synaptics/ic_ver /data/tp/ic_ver
-    symlink /sys/class/tpnode/tpnode/synaptics/reset /data/tp/reset
-    symlink /sys/class/tpnode/tpnode/synaptics/f54/ic_detect /data/tp/ic_detect
-    symlink /sys/class/tpnode/tpnode/synaptics/start_update /data/tp/start_update
-    symlink /sys/class/tpnode/tpnode/synaptics/wake_gesture /data/tp/easy_wakeup_gesture
-    chown system system /sys/class/tpnode/tpnode/synaptics/palm_sleep
-    symlink /sys/class/tpnode/tpnode/synaptics/palm_sleep /data/tp/easy_sleep_palm
-    chown system system /sys/class/tpnode/tpnode/synaptics/f54/read_rt2
-    chown system system /sys/class/tpnode/tpnode/synaptics/f54/read_rt3
-    symlink /sys/class/tpnode/tpnode/synaptics/f54/read_rt2 /data/tp/read_rt2
-    symlink /sys/class/tpnode/tpnode/synaptics/f54/read_rt3 /data/tp/read_rt3
-    symlink /sys/class/tpnode/tpnode/synaptics/f54/read_rt2 /data/tp/debug/read_rt2
-    symlink /sys/class/tpnode/tpnode/synaptics/f54/read_rt3 /data/tp/debug/read_rt3
-    write /sys/class/tpnode/tpnode/synaptics/start_update 1
-    chown system system /sys/kernel/lcd_enhance/colortmp
-    chown system system /sys/kernel/lcd_enhance/saturation
     chown system system /sys/kernel/lcd_enhance/cabc
-
-on property:sys.tp.wakeup=*
-    write /sys/class/tpnode/tpnode/synaptics/wake_gesture ${sys.tp.wakeup}
-
-on property:sys.tp.palmsleep=*
-    write /sys/class/tpnode/tpnode/synaptics/palm_sleep ${sys.tp.palmsleep}
+    chown system system /sys/kernel/lcd_enhance/aod_mode
+    chown system system /sys/kernel/lcd_enhance/lcd_state
+    chown system system /sys/kernel/lcd_enhance/rgbw_mode
 
 service goodix_script /vendor/bin/init.goodix.sh
     class late_start

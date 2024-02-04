@@ -1,5 +1,0 @@
-# Audio - ultrasound
-type ultra_device, dev_type;
-
-# NFC
-type sec_device, dev_type;

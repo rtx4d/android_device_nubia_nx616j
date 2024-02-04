@@ -1,8 +1,5 @@
-# Audio
-audio.ultrasonic.disable=false
-
 # Bluetooth
-bluetooth.device.default_name=Nubia Z18
+bluetooth.device.default_name=Nubia X
 
 # USB
-vendor.usb.product_string=Nubia Z18
+vendor.usb.product_string=Nubia X

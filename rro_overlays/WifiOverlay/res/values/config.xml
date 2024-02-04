@@ -18,5 +18,5 @@
 -->
 <resources>
     <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Nubia Z18</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Nubia X</string>
 </resources>
