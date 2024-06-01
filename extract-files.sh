@@ -17,6 +17,12 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed "libkeymaster_messages.so" "${2}"
         "${PATCHELF}" --remove-needed "libsoftkeymasterdevice.so" "${2}"
         ;;
+    vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so)
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        ;;
+    vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so)
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        ;;
     esac
 }
 
