@@ -1,0 +1,3 @@
+genfscon sysfs /devices/virtual/proximity_front/proximity_front/prox_init                u:object_r:sysfs_proximity_sensor:s0
+genfscon sysfs /devices/virtual/proximity_front/proximity_front/enable                   u:object_r:sysfs_proximity_sensor:s0
+genfscon sysfs /devices/virtual/proximity_back/proximity_back/enable                     u:object_r:sysfs_proximity_sensor:s0
