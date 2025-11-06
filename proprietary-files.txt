@@ -1,7 +1,7 @@
 # Unpinned blobs from NX616J-user 9 PKQ1.180929.001 eng.nubia.20220304.212707 release-keys
 
 # Audio
-vendor/lib/hw/audio.primary.sdm845.so|1a8b1a8305b117b6aba7c48d740946640b40a552
+vendor/lib/hw/audio.primary.sdm845.so|1fae45991f885ee26a94ecce5222e9c40ca66f84
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
@@ -19,6 +19,7 @@ vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib/libwebrtc_audio_preprocessing.so
 
 # ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -55,31 +56,27 @@ vendor/lib/camera/com.qti.sensor.ov13880.so
 vendor/lib/camera/com.qti.sensor.ov8856.so
 vendor/lib/camera/com.qti.sensor.s5k2x7.so
 vendor/lib/camera/com.qti.sensor.sunny_s5k2x7.so
-
 vendor/lib/camera/com.qti.sensormodule.nubia_imx499.bin
 vendor/lib/camera/com.qti.sensormodule.nubia_imx519.bin
 vendor/lib/camera/com.qti.sensormodule.nubia_ov8856.bin
 vendor/lib/camera/com.qti.sensormodule.sony_imx000.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_s5k2x7.bin
-
 vendor/lib/camera/com.qti.tuned.default.bin
 vendor/lib/camera/com.qti.tuned.nubia_imx499.bin
 vendor/lib/camera/com.qti.tuned.nubia_imx519.bin
 vendor/lib/camera/com.qti.tuned.nubia_imx519front.bin
 vendor/lib/camera/com.qti.tuned.nubia_ov8856.bin
 vendor/lib/camera/com.qti.tuned.sunny_s5k2x7.bin
-
 vendor/lib/camera/fdconfigpreview.bin
 vendor/lib/camera/fdconfigpreviewlite.bin
 vendor/lib/camera/fdconfigvideo.bin
 vendor/lib/camera/fdconfigvideolite.bin
 vendor/lib/camera/titan17x_usecases.bin
-
 vendor/lib/camera/components/com.arcsoft.node.capturebokeh.so
 vendor/lib/camera/components/com.arcsoft.node.realtimebokeh.so
 vendor/lib/camera/components/com.nubia.node.nubiaalgorithm.so
 vendor/lib/camera/components/com.nubia.node.nubiahdr.so
-vendor/lib/camera/components/com.nubia.node.realtimeaicamera.so
+vendor/lib/camera/components/com.nubia.node.realtimeaicamera.so|bfdc824a0938022a1b176d4951751f9bcd9d184c
 vendor/lib/camera/components/com.nubia.node.realtimealgorithm.so
 vendor/lib/camera/components/com.qti.eisv2.so
 vendor/lib/camera/components/com.qti.eisv3.so
@@ -125,13 +122,13 @@ vendor/lib/libcom.qti.chinodeutils.so
 
 # Fingerprint
 vendor/lib64/libteeclientjni.so
-vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm845.so
+vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm845.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_ftm.so
 vendor/lib64/libgf_hal.so
-vendor/lib64/libgoodixhwfingerprint.so|2f656f802ff36db6e276c757a31b9c69303570b9
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so|1b7289933797b6947126c8b71558f2b45d5e4ff5
-vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so|b34a6ffb643df2b5085be3a65585db6f0c2ca4c5
+vendor/lib64/libgoodixhwfingerprint.so|5f29125dccf8465f3868c99b23faaf77a1257585
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so|59c6b8d2d61eb17cdf58a7ab8d87513f870ec2b4
+vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so|5b443249ea92cb8ae183156b1335b6a4a62bcd27
 
 # Fingerprint firmware
 vendor/firmware/goodix_cfg_group.bin
