@@ -1,14 +1,6 @@
 # Unpinned blobs from NX616J-user 9 PKQ1.180929.001 eng.nubia.20220304.212707 release-keys
 
 # Audio
-vendor/lib64/hw/audio.primary.sdm845.so|0a5399d2cccc3e037e6a997fcbbbc913760716b4
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libqtigef.so
-vendor/lib64/libtinycompress_vendor.so
 vendor/lib/hw/audio.primary.sdm845.so|1a8b1a8305b117b6aba7c48d740946640b40a552
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
@@ -27,11 +19,6 @@ vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libaudiopreprocessing.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
 
 # ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -46,9 +33,6 @@ vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
 
 # Charger
 vendor/bin/hvdcp_opti
@@ -171,15 +155,10 @@ vendor/firmware/a630_zap.mdt
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
@@ -191,7 +170,6 @@ vendor/etc/qdcm_calib_data_himax_cmd_mode_dsi_boe_panel.xml
 # Sensors - light & promixity
 vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
-vendor/lib/sensors.ssc.so
 
 # Sensors configs
 vendor/etc/sensors/config/ak991x_dri_0.json
